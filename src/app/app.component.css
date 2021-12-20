@@ -1,0 +1,39 @@
+h1{ 
+    margin-top: 50px;
+    text-align: center;
+    font-size:  50px;
+    color:rgba(87,5,126);
+    font-family: play;
+    font-weight: bold;
+    letter-spacing:5px;
+}
+
+div{
+    margin-top: 0px;
+    text-align: center;
+}
+
+.nav-bar{
+    justify-content: space-between;
+}
+
+span{ 
+    padding-right: 1rem;
+}
+
+mat-drawer-container{
+    height: 100%;
+
+}
+ 
+mat-drawer, mat-drawer-content{
+    padding: 16px;
+}
+
+mat-drawer{
+    background-color:rgba(87,5,126);
+    width:200px;
+}
+/*mat-grid-tile {
+    background: lightblue;
+  }*/

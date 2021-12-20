@@ -1,0 +1,348 @@
+ 
+
+<mat-toolbar color="warn" class="nav-bar"> <!--custom css class nav-bar created-->
+ <div>Angular</div>
+ <div> 
+   <button mat-button>Home</button>
+   <button mat-button>About Us</button>
+   <button mat-button [matMenuTriggerFor]="serviceMenu">Services</button>
+   <button mat-button>Contact Us</button>
+   <button mat-button routerLink="/profile">profile</button>
+   <button mat-button [matMenuTriggerFor]="logoutMenu">Logout</button>
+</div>
+</mat-toolbar>
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [(opened)]="opened">Side content
+   <!-- <mat-list> simple matlist for side nav
+      <mat-list-item>Angular</mat-list-item>
+      <mat-list-item>Angular</mat-list-item>
+      <mat-list-item>Angular</mat-list-item>
+    </mat-list> -->
+    <mat-nav-list> 
+      <a mat-list-item href="#"><mat-icon>home</mat-icon>Home</a>
+      
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+    <mat-nav-list> 
+     
+      <a mat-list-item href="#"><mat-icon>security</mat-icon>Security</a>
+      
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+    <mat-nav-list> 
+      
+      <a mat-list-item href="#"><mat-icon>folder</mat-icon>Folder</a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+  
+  </mat-drawer>
+  <mat-drawer-content>
+    <button (click)="opened=!opened"><mat-icon>menu</mat-icon></button> 
+    <mat-grid-list cols="3">
+      <mat-grid-tile>
+       
+        <mat-accordion class="example-headers-align" multi>
+        
+          <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Angular fundamentals
+            </mat-panel-title>
+            <mat-panel-description>
+              This is a summary of the content
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>this is pannel conetent describes course details</p>
+          <mat-action-row>
+            <button mat-raised-button color="primary" >Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Angular fundamentals
+            </mat-panel-title>
+            <mat-panel-description>
+              This is a summary of the content
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>this is pannel conetent describes course details</p>
+          <mat-action-row>
+            <button mat-raised-button color="primary" >Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-accordion class="example-headers-align" multi>
+        
+          <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Angular fundamentals
+            </mat-panel-title>
+            <mat-panel-description>
+              This is a summary of the content
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>this is pannel conetent describes course details</p>
+          <mat-action-row>
+            <button mat-raised-button color="primary" >Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Angular fundamentals
+            </mat-panel-title>
+            <mat-panel-description>
+              This is a summary of the content
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>this is pannel conetent describes course details</p>
+          <mat-action-row>
+            <button mat-raised-button color="primary" >Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      </mat-accordion>
+      </mat-grid-tile>
+      
+    </mat-grid-list>
+  </mat-drawer-content>
+  
+</mat-drawer-container>
+
+<mat-menu #serviceMenu="matMenu"> <!--matMenu value predefined,& assigning this menu to nav bar service-->
+  <button mat-menu-item [matMenuTriggerFor]="frontEndMenu">FrontEnd</button>
+  <button mat-menu-item>BackEnd</button>
+</mat-menu>
+<mat-menu #frontEndMenu="matMenu"> <!--sub menu for FrontEnd-->
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+  <button mat-menu-item>vue</button>
+</mat-menu>
+<mat-menu #logoutMenu="matMenu"> 
+  <button mat-menu-item>logout - {{userName}}</button>
+ 
+</mat-menu>
+
+
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <hr>
+<button mat-raised-button color="primary">welcome to angular material</button>
+<button mat-stroked-button color="primary">welcome to angular material</button>
+<button mat-flat-button color="warn">welcome to angular material</button>
+<button mat-flat-button color="accent">welcome to angular material</button> <br>
+
+<h1>
+  Angular Material
+</h1> <hr>
+<div>
+  <button mat-raised-button color="primary">welcome to angular material</button>
+  <button mat-raised-button color="warn">welcome to angular material</button>
+  <button mat-raised-button color="accent">welcome to angular material</button>
+</div> <br> <hr>
+<h1>
+  Angular Material typography, display classes
+</h1>
+
+<div class="mat-display-1"> Header 1</div>
+<div class="mat-display-2"> Header 2</div>
+<div class="mat-display-3"> Header 3</div>
+<div class="mat-display-4"> Header 4</div>
+
+<div class="mat-headline"> Headline</div>
+<div class="mat-title"> Title</div>
+<div class="mat-subheading-1"> subheading 1</div>
+<div class="mat-subheading-2"> subheading 2</div>
+
+<div class="mat-body-1">Body Text</div>
+<div class="mat-body-2">Bold Body Text</div>
+<div class="mat-caption">caption Text</div>
+
+<div class="mat-typography">
+  <h1>For header 1</h1>
+  <h2>For header 2</h2>
+  <h3>For header 3</h3>
+  <h4>For header 4</h4>
+
+</div> <br> <hr>
+
+<h1>
+  Angular Material buttons
+</h1> 
+<div>
+  <button mat-button>Button</button>
+  <button mat-raised-button>Raised </button>
+  <button mat-flat-button>flat</button>
+  <button mat-stroked-button>material</button>
+</div>
+
+<div>
+  <button mat-button color="primary">primary</button>
+  <button mat-raised-button color="primary">primary color </button>
+  <button mat-flat-button color="warn">warn</button>
+  <button mat-stroked-button color="accent">accent</button>
+</div>
+
+<div>
+  <button mat-icon-button color="primary">icon button</button>
+  <button mat-fab color="primary">fab  </button>
+  <button mat-mini-fab color="warn">minifab</button>
+  
+</div>
+
+<div>
+  <button mat-raised-button color="primary" disableRipple>no ripple </button>
+  <a mat-raised-button color="warn" href="https://google.com" target="_blank">google</a>
+</div>
+
+<br> <hr>
+
+<h1>
+  Angular Material, button toggle
+</h1> 
+
+<div>
+  <mat-button-toggle  #state disableRipple >Toggle</mat-button-toggle>
+  {{state.checked}}
+  <mat-button-toggle  #state2 disableRipple disabled>Toggle</mat-button-toggle>
+  {{state2.checked}}
+</div>
+
+<div>
+  <h2>radio</h2>
+<mat-button-toggle-group #group="matButtonToggleGroup">
+  <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+  <mat-button-toggle value="React">React</mat-button-toggle>
+  <mat-button-toggle value="Vue">Vue</mat-button-toggle>
+  <mat-button-toggle value="Bootstrap" checked>Bootstrap</mat-button-toggle>
+
+</mat-button-toggle-group>
+{{group.value}}
+
+</div>
+
+<div>
+  <h2>checkbox</h2>
+<mat-button-toggle-group #group2="matButtonToggleGroup" multiple>
+  <mat-button-toggle value="Angular" >Angular</mat-button-toggle>
+  <mat-button-toggle value="React">React</mat-button-toggle>
+  <mat-button-toggle value="Vue" checked>Vue</mat-button-toggle>
+  <mat-button-toggle value="Bootstrap">Bootstrap</mat-button-toggle>
+
+</mat-button-toggle-group>
+{{group2.value}}
+
+</div>
+
+<br> <hr>
+
+<h1>
+  Angular Material, Material Icons
+</h1> 
+
+<div>
+  <mat-icon color="primary">search</mat-icon>
+  <mat-icon color="warn">home</mat-icon>
+  <mat-icon color="primary">check_circle</mat-icon>
+  <mat-icon color="primary">settings</mat-icon>
+  <mat-icon color="primary">info</mat-icon>
+  <mat-icon color="warn">shopping_cart</mat-icon>
+  <mat-icon color="primary">delete</mat-icon>
+  <mat-icon color="primary">visibility</mat-icon>
+  <mat-icon color="primary">favorite</mat-icon> <br>
+  
+  <mat-icon>logout</mat-icon>
+  <mat-icon>description</mat-icon>
+  <mat-icon>lock</mat-icon>
+  <mat-icon>face</mat-icon>
+  <mat-icon>schedule</mat-icon>
+  <mat-icon>language</mat-icon>
+  <mat-icon>fingerprint</mat-icon>
+  
+  <mat-icon>manage_accounts</mat-icon>
+  <mat-icon>thumb_up</mat-icon> 
+  
+</div>
+
+<br> <hr>
+
+<h1>
+  Angular Material, Badges
+</h1>
+
+<div>
+  <span matBadge="10">Notifications</span> <br> <br>
+  <span matBadge="10" matBadgePosition="below before">Notifications</span> <br> <br>
+  <span matBadge="10" matBadgePosition="below after">Notifications</span> <br> <br>
+  <span matBadge="10" matBadgePosition="above before">Notifications</span> <br> <br>
+  <span matBadge="10" matBadgePosition="above after">Notifications</span> <br> <br>
+
+</div>
+
+<div>
+  <span matBadge="10"  matBadgeSize="small" >Notifications</span>
+</div>
+<div>
+  <span matBadge="10"  matBadgeSize="medium" >Notifications</span>
+</div>
+<div>
+  <span matBadge="10"  matBadgeSize="large" >Notifications</span>
+</div>
+
+<div>
+  <span matBadge="10"  matBadgeColor="accent" >Notifications</span>
+</div>
+<div>
+  <span matBadge="10"  matBadgeColor="warn" >Notifications</span>
+</div>
+<div>
+  <span matBadge="10"  matBadgeColor="primary" >Notifications</span>
+</div>
+
+<div>
+  <span matBadge="10"  matBadgeColor="warn" matBadgeOverlap="false" >Notifications</span>
+</div>
+
+<div><h2>badge dynamic number by property binding</h2></div>
+
+<div>
+  <span [matBadge]="notifications" matBadgeOverlap="false">notifications</span>
+</div>
+
+<div>
+  <span [matBadge]="notify" matBadgeOverlap="false" [matBadgeHidden]="notify===0">notifications</span>
+</div>
+
+<br> <hr>
+
+<h1>
+  Angular Material, progress spinner
+</h1>
+
+<div>
+  <mat-progress-spinner value="50"></mat-progress-spinner>
+</div>
+
+<div>
+  <mat-spinner  value="50" color="warn"></mat-spinner>
+</div>
+<div>
+  <mat-spinner  value="50" color="accent"></mat-spinner>
+</div>
+<div>
+  <mat-spinner  value="30" color="warn"></mat-spinner>
+</div>
+
+<div><h2>dynamic progress spinner by button click</h2></div>
+
+<div>
+  <mat-spinner *ngIf="showSpinner"  value="30" color="warn"></mat-spinner>
+  <button mat-raised-button color="warn" (click)="loadData()">submit</button>
+</div>
